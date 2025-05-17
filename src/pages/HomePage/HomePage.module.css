@@ -8,7 +8,7 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: #1f2937;
+    color: var(--text-color);
     position: relative;
     display: inline-block;
 }
@@ -20,7 +20,7 @@
   left: 0;
   width: 3rem;
   height: 0.25rem;
-  background-color: #3b82f6;
+  background-color: var(--acsent-color);
   border-radius: 0.125rem;
 }
 
@@ -29,7 +29,7 @@
   padding: 3rem;
   background-color: #f3f4f6;
   border-radius: 0.5rem;
-  color: #6b7280;
+  color: var(--text-color);
   font-size: 1.125rem;
 }
 
