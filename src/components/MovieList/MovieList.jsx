@@ -4,11 +4,11 @@ import { getImageUrl } from '../../api/tmdb';
 import { Star } from 'lucide-react';
 
 const MovieList = ({ movies }) => {
-    // const location = useLocation();
+     const location = useLocation();
     return (
         <div>
             {movies.map((movie) => (
-                <article
+                <Link
                     to={`/movies/${movie.id}`}
                     key={movie.id}
                     className="card"
@@ -28,7 +28,7 @@ const MovieList = ({ movies }) => {
                     <div>
                         <p>{movie.release_date ? new Date(movie.release_date).getFullYear():'Unknown'}</p>
                     </div>
-                </article>
+                </Link>
             ))}
         </div>
     );

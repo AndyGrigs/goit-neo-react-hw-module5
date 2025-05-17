@@ -3,6 +3,7 @@ import { getTrendingMovies } from '../../api/tmdb';
 import Loader from '../../components/Loader/Loader';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import MovieList from '../../components/MovieList/MovieList';
+import styles from './HomePage.module.css';
 
 const HomePage = () => {
     const [movies, setMovies] = useState([]);
@@ -28,12 +29,14 @@ const HomePage = () => {
         fetchMovies();
     }, []);
     return (
-        <div>
-            <h1>Trending Today</h1>
+        <div className={styles.container}>
+            <h1 className={styles.title}>Trending Today</h1>
             {loading && <Loader />}
             {error && <ErrorMessage message={error} />}
-            {movies.length > 0 && !loading && !error && <MovieList movies={movies}/>}
-            {movies.length === 0 && !loading && !error && <p>There is no movies...</p>}
+            {movies.length > 0 && !loading && !error && <MovieList movies={movies} />}
+            {movies.length === 0 && !loading && !error && (
+                <p className={styles.noMovies}>There is no movies...</p>
+            )}
         </div>
     );
 };
