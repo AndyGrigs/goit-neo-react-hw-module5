@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { getTrendingMovies } from '../../api/tmdb';
-import Loader from '../Loader/Loader';
-import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import MovieList from '../MovieList/MovieList';
+import Loader from '../../components/Loader/Loader';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import MovieList from '../../components/MovieList/MovieList';
 
 const HomePage = () => {
     const [movies, setMovies] = useState([]);
