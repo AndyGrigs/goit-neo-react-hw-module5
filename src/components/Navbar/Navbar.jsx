@@ -6,10 +6,11 @@ const Navbar = () => {
     return (
         <nav className={styles.navigation}>
             <div className={styles.box}>
-                <div className="logo">
+                <div className={styles.logo}>
                     <FilmIcon size={24} />
+                    <span>MovieFinder</span>
                 </div>
-                <ul className="navlinks">
+                <ul className={styles.navlinks}>
                     <NavLink
                         className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
                         to="/"
