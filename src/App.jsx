@@ -3,9 +3,10 @@ import Loader from './components/Loader/Loader';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import MovieDetailsPage from './pages/MovieDetailsPage/MovieDetailsPage';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
+const MovieDetailsPage = lazy(()=> import('./pages/MovieDetailsPage/MovieDetailsPage'))
+const MovieReviews = lazy(()=> import('./components/MovieReviews/MovieReviews'))
 
 function App() {
     return (
@@ -15,8 +16,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path='movies/:movieId' element={<MovieDetailsPage/>}>
-                        <Route path='cast'/>
-                        <Route path='reviews'/>
+                        <Route path='cast'  />
+                        <Route path='reviews'element={<MovieReviews/>}/>
                     </Route>
                 </Routes>
             </Suspense>

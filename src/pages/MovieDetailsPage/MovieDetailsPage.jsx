@@ -33,7 +33,7 @@ const MovieDetailsPage = () => {
             }
         };
         fetchMovieDetails();
-        return () => (document.title = 'Here you can find your movie!');
+        return () => (document.title = 'your movie');
     }, [movieId]);
 
     if (loading) return <Loader />;
@@ -55,66 +55,7 @@ const MovieDetailsPage = () => {
                     <span>Go back</span>
                 </Link>
 
-                {/* <div className={styles.movieContainer}>
-                    <div className={styles.posterContainer}>
-                        <img src={getImageUrl(movie.poster_path)} alt={movie.title} />
-                    </div>
-                    <div className={styles.detailsContainer}>
-                        <h2 className={styles.title}>{movie.title}</h2>
-                        {movie.tagline && <p className={styles.tagline}>{movie.tagline}</p>}
-                    </div>
-
-                    <div className={styles.metaInfo}>
-                        <div className={styles.metaItem}>
-                            <Calendar size={18} />
-                            <span>{movie.runtime}</span>
-                        </div>
-                        <div className={styles.metaItem}>
-                            <Star size={18} className={styles.starIcon} />
-                            <span>{movie.vote_average.toFixed(1)}</span>
-                        </div>
-                        <div className={styles.metaItem}>
-                            <BarChart2 size={18} />
-                            <span>{movie.vote_count}</span>
-                        </div>
-                    </div>
-
-                    <div className={styles.genreContainer}>
-                        {movie.genres.map((genre) => (
-                            <span key={genre.id} className={styles.genre}>
-                                {genre.name}
-                            </span>
-                        ))}
-                    </div>
-
-                    <div className={styles.overview}>
-                        <h2 className={styles.sectionTitle}>Overview</h2>
-                        <p>{movie.overview}</p>
-                    </div>
-
-                    <div className={styles.additionalInfoContainer}>
-                        <h2 className={styles.sectionTitle}>Additional information</h2>
-                        <div className={styles.infoLinks}>
-                            <NavLink
-                                to="cast"
-                                className={({ isActive }) =>
-                                    isActive ? styles.activeInfoLink : styles.infoLink
-                                }
-                            >
-                                Cast
-                            </NavLink>
-                            <NavLink
-                                to="reviews"
-                                className={({ isActive }) =>
-                                    isActive ? styles.activeInfoLink : styles.infoLink
-                                }
-                            >
-                                Reviews
-                            </NavLink>
-                        </div>
-                    </div>
-                </div> */}
-
+        
                 <div className={styles.movieContainer}>
                     <div className={styles.posterContainer}>
                         <img
