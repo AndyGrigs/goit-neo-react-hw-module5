@@ -47,9 +47,10 @@ body{
 }
 
 :root{
-	--background-color: #1f2937;
+	--background-color: #136f63;
 	--title-color: #1f2937;
-	--acsent-color: #3b82f6;
+	--acsent-color: #4ce0d2;
+	--hover-color: #84cae7;
 	--text-color: #6b7280;
 	--link-color: #e5e7eb;
 }

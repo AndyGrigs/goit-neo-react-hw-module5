@@ -56,7 +56,7 @@ export const searchMovies = async (query)=>{
     const response = await tmdb.get('/search/movie', {
       params: {
         query, 
-        include_adult: true,
+        include_adult: false,
         language: 'en-Us',
         page: 1
       }

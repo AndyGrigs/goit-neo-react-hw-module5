@@ -7,7 +7,6 @@ import { ArrowLeft, BarChart4, Calendar, Star, Clock } from 'lucide-react';
 
 const MovieDetailsPage = () => {
     const { movieId } = useParams();
-    console.log(movieId);
     const location = useLocation();
     const backLinkRef = useRef(location.state?.from || '/movie');
 

@@ -30,7 +30,6 @@ const MovieReviews = () => {
         fetchReviews();
     }, [movieId]);
 
-    console.log(reviews);
 
     if (loading) return <Loader />;
     if (error) return <ErrorMessage message={error} />;
