@@ -7,7 +7,7 @@ import Navbar from './components/Navbar/Navbar';
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const MovieDetailsPage = lazy(()=> import('./pages/MovieDetailsPage/MovieDetailsPage'))
 const MovieReviews = lazy(()=> import('./components/MovieReviews/MovieReviews'))
-
+const MovieCast = lazy(()=> import('./components/MovieCast/MovieCast'))
 function App() {
     return (
         <div>
@@ -16,7 +16,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path='movies/:movieId' element={<MovieDetailsPage/>}>
-                        <Route path='cast'  />
+                        <Route path='cast' element={<MovieCast/>} />
                         <Route path='reviews'element={<MovieReviews/>}/>
                     </Route>
                 </Routes>
